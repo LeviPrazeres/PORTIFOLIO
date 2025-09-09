@@ -308,7 +308,7 @@ const translations = {
         'nav-habilidades': 'Habilidades',
         'nav-projetos': 'Projetos',
         'nav-contato': 'Contato',
-        'brand-title': 'Desenvolvedor Web',
+        'brand-title': 'Analista e Desenvolvedor de Sistemas',
         
         // Hero Section
         'hero-title': 'ESTUDANTE DE ADS &<br>DESENVOLVEDOR WEB',
@@ -391,7 +391,7 @@ const translations = {
         'nav-habilidades': 'Skills',
         'nav-projetos': 'Projects',
         'nav-contato': 'Contact',
-        'brand-title': 'Web Developer',
+        'brand-title': 'Systems Analyst and Developer',
         
         // Hero Section
         'hero-title': 'ADS STUDENT &<br>WEB DEVELOPER',
