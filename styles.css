@@ -228,8 +228,8 @@ body {
     border-radius: 20px;
     filter: grayscale(100%);
     transition: filter 0.3s ease;
-    mask: radial-gradient(ellipse at center, black 60%, transparent 100%);
-    -webkit-mask: radial-gradient(ellipse at center, black 60%, transparent 100%);
+    mask: radial-gradient(circle at center, black 75%, rgba(0,0,0,0.5) 85%, transparent 95%);
+    -webkit-mask: radial-gradient(circle at center, black 75%, rgba(0,0,0,0.5) 85%, transparent 95%);
 }
 
 .hero-image img:hover {
