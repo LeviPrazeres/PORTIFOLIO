@@ -491,7 +491,7 @@ section {
 }
 
 .skills-section {
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
 }
 
 .skills-section h3 {
@@ -503,16 +503,18 @@ section {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 0.8rem;
     justify-items: center;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .skill-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.3rem;
     text-align: center;
 }
 
