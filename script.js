@@ -298,4 +298,366 @@ window.addEventListener('scroll', () => {
     });
 });
 
+// Translation system
+const translations = {
+    pt: {
+        // Navigation
+        'nav-sobre': 'Sobre',
+        'nav-formacao': 'Formação',
+        'nav-certificados': 'Certificados',
+        'nav-habilidades': 'Habilidades',
+        'nav-projetos': 'Projetos',
+        'nav-contato': 'Contato',
+        'brand-title': 'Desenvolvedor Web',
+        
+        // Hero Section
+        'hero-title': 'ESTUDANTE DE ADS &<br>DESENVOLVEDOR WEB',
+        'hero-description': 'Olá, me chamo Levi<br>Focado em criar experiências digitais modernas e funcionais. Cursando Análise e Desenvolvimento de Sistemas com paixão por tecnologias web e design de interfaces.',
+        'btn-projects': 'Ver Projetos ↓',
+        'btn-about': 'Sobre Mim',
+        
+        // About Section
+        'about-subtitle': 'SOBRE MIM',
+        'about-title': 'Desenvolvedor em formação com foco em experiências digitais',
+        'about-text-1': 'Sou formado em Análise e Desenvolvimento de Sistemas, apaixonado por criar soluções web que combinam funcionalidade e design. Minha jornada na programação começou com curiosidade e evoluiu para uma dedicação constante ao aprendizado.',
+        'about-text-2': 'Tenho experiência prática com desenvolvimento front-end e back-end, sempre buscando as melhores práticas e tecnologias mais atuais do mercado.',
+        'tag-1': 'Proativo',
+        'tag-2': 'Detalhista',
+        'tag-3': 'Criativo',
+        'tag-4': 'Colaborativo',
+        
+        // Education Section
+        'education-subtitle': 'FORMAÇÃO ACADÊMICA',
+        'education-title': 'Minha jornada educacional',
+        'education-course': 'Engenharia de Software',
+        'education-institution': 'Universidade Católica de Brasília (UCB)',
+        'education-period': '2023 - 2025 (previsão)',
+        'education-description': 'Engenharia de Software – Universidade Católica de Brasília (UCB)<br>Curso tecnólogo focado em desenvolvimento de software, análise de sistemas, banco de dados e metodologias ágeis, com aprofundamento em programação web, mobile e gestão de projetos de TI. Formação voltada para a aplicação prática de soluções tecnológicas inovadoras, alinhadas às demandas do mercado de software.',
+        'course-1-title': 'Desenvolvimento Web Completo',
+        'course-1-platform': 'Plataforma Online • 2023',
+        'course-1-description': 'JavaScript, React, Node.js, MongoDB, Lua, C# - Do front-end ao back-end.',
+        'course-2-title': 'Banco de Dados e SQL',
+        'course-2-platform': 'Certificação • 2023',
+        'course-2-description': 'Modelagem, otimização e administração de bancos relacionais.',
+        
+        // Certificates Section
+        'certificates-subtitle': 'CERTIFICAÇÕES',
+        'certificates-title': 'Meus certificados',
+        'cert-1-title': 'Desenvolvimento Web Full Stack',
+        'cert-1-platform': 'Plataforma Online',
+        'cert-1-year': '2023',
+        'cert-2-title': 'Banco de Dados e SQL',
+        'cert-2-platform': 'Certificação',
+        'cert-2-year': '2023',
+        'btn-certificate': 'Ver certificado',
+        
+        // Skills Section
+        'skills-subtitle': 'HABILIDADES',
+        'skills-title': 'Tecnologias & Ferramentas',
+        'skills-frontend': 'Frontend',
+        'skills-backend': 'Backend',
+        'skills-tools': 'Ferramentas',
+        
+        // Projects Section
+        'projects-subtitle': 'PROJETOS',
+        'projects-title': 'Alguns dos meus trabalhos',
+        'project-1-title': 'Sistema de Gerenciamento',
+        'project-1-description': 'Aplicação web completa para gerenciar dados de clientes com Node.js e MongoDB.',
+        'project-2-title': 'Dashboard Analytics',
+        'project-2-description': 'Interface interativa para visualização de dados com gráficos dinâmicos.',
+        'project-3-title': 'API RESTful',
+        'project-3-description': 'API robusta para gestão de recursos com autenticação e documentação.',
+        'btn-code': 'Código',
+        
+        // Contact Section
+        'contact-subtitle': 'PRECISA DE UM DESENVOLVEDOR?',
+        'contact-title': 'Vamos trabalhar juntos →',
+        'contact-info-title': 'Informações de contato',
+        'contact-info-text': 'Sinta-se à vontade para entrar em contato comigo a qualquer momento. Prefiro conversar por email, especialmente porque podemos estar em fusos horários diferentes.',
+        'availability-title': 'Disponibilidade atual',
+        'availability-text': 'Atualmente trabalho em vários projetos pessoais, mas estarei feliz em discutir novas oportunidades.',
+        'availability-status': 'Disponível para novos projetos',
+        'social-title': 'Me siga em',
+        
+        // Footer
+        'footer-quote': 'Sempre aprendendo, sempre evoluindo',
+        'footer-copyright': '© 2025 Samuel. Todos os direitos reservados.'
+    },
+    en: {
+        // Navigation
+        'nav-sobre': 'About',
+        'nav-formacao': 'Education',
+        'nav-certificados': 'Certificates',
+        'nav-habilidades': 'Skills',
+        'nav-projetos': 'Projects',
+        'nav-contato': 'Contact',
+        'brand-title': 'Web Developer',
+        
+        // Hero Section
+        'hero-title': 'ADS STUDENT &<br>WEB DEVELOPER',
+        'hero-description': 'Hello, my name is Levi<br>Focused on creating modern and functional digital experiences. Studying Systems Analysis and Development with passion for web technologies and interface design.',
+        'btn-projects': 'View Projects ↓',
+        'btn-about': 'About Me',
+        
+        // About Section
+        'about-subtitle': 'ABOUT ME',
+        'about-title': 'Developer in training focused on digital experiences',
+        'about-text-1': 'I graduated in Systems Analysis and Development, passionate about creating web solutions that combine functionality and design. My programming journey started with curiosity and evolved into constant dedication to learning.',
+        'about-text-2': 'I have practical experience with front-end and back-end development, always seeking best practices and the most current market technologies.',
+        'tag-1': 'Proactive',
+        'tag-2': 'Detail-oriented',
+        'tag-3': 'Creative',
+        'tag-4': 'Collaborative',
+        
+        // Education Section
+        'education-subtitle': 'ACADEMIC BACKGROUND',
+        'education-title': 'My educational journey',
+        'education-course': 'Software Engineering',
+        'education-institution': 'Catholic University of Brasília (UCB)',
+        'education-period': '2023 - 2025 (expected)',
+        'education-description': 'Software Engineering – Catholic University of Brasília (UCB)<br>Technology course focused on software development, systems analysis, databases and agile methodologies, with deepening in web programming, mobile and IT project management. Training aimed at practical application of innovative technological solutions, aligned with software market demands.',
+        'course-1-title': 'Complete Web Development',
+        'course-1-platform': 'Online Platform • 2023',
+        'course-1-description': 'JavaScript, React, Node.js, MongoDB, Lua, C# - From front-end to back-end.',
+        'course-2-title': 'Database and SQL',
+        'course-2-platform': 'Certification • 2023',
+        'course-2-description': 'Modeling, optimization and administration of relational databases.',
+        
+        // Certificates Section
+        'certificates-subtitle': 'CERTIFICATIONS',
+        'certificates-title': 'My certificates',
+        'cert-1-title': 'Full Stack Web Development',
+        'cert-1-platform': 'Online Platform',
+        'cert-1-year': '2023',
+        'cert-2-title': 'Database and SQL',
+        'cert-2-platform': 'Certification',
+        'cert-2-year': '2023',
+        'btn-certificate': 'View certificate',
+        
+        // Skills Section
+        'skills-subtitle': 'SKILLS',
+        'skills-title': 'Technologies & Tools',
+        'skills-frontend': 'Frontend',
+        'skills-backend': 'Backend',
+        'skills-tools': 'Tools',
+        
+        // Projects Section
+        'projects-subtitle': 'PROJECTS',
+        'projects-title': 'Some of my work',
+        'project-1-title': 'Management System',
+        'project-1-description': 'Complete web application to manage client data with Node.js and MongoDB.',
+        'project-2-title': 'Analytics Dashboard',
+        'project-2-description': 'Interactive interface for data visualization with dynamic graphics.',
+        'project-3-title': 'RESTful API',
+        'project-3-description': 'Robust API for resource management with authentication and documentation.',
+        'btn-code': 'Code',
+        
+        // Contact Section
+        'contact-subtitle': 'NEED A DEVELOPER?',
+        'contact-title': 'Let\'s work together →',
+        'contact-info-title': 'Contact information',
+        'contact-info-text': 'Feel free to contact me at any time. I prefer to talk via email, especially since we might be in different time zones.',
+        'availability-title': 'Current availability',
+        'availability-text': 'I currently work on various personal projects, but I\'ll be happy to discuss new opportunities.',
+        'availability-status': 'Available for new projects',
+        'social-title': 'Follow me',
+        
+        // Footer
+        'footer-quote': 'Always learning, always evolving',
+        'footer-copyright': '© 2025 Samuel. All rights reserved.'
+    }
+};
+
+// Language management
+let currentLanguage = localStorage.getItem('language') || 'pt';
+
+// Function to translate content
+function translateContent(language) {
+    const elements = document.querySelectorAll('[data-translate]');
+    elements.forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[language] && translations[language][key]) {
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                element.placeholder = translations[language][key];
+            } else {
+                element.innerHTML = translations[language][key];
+            }
+        }
+    });
+    
+    // Update document language
+    document.documentElement.lang = language === 'pt' ? 'pt-BR' : 'en';
+    
+    // Save language preference
+    localStorage.setItem('language', language);
+    currentLanguage = language;
+}
+
+// Initialize language system
+document.addEventListener('DOMContentLoaded', () => {
+    // Add data-translate attributes to elements
+    addTranslateAttributes();
+    
+    // Set initial language
+    const languageSelector = document.getElementById('language-selector');
+    if (languageSelector) {
+        languageSelector.value = currentLanguage;
+        translateContent(currentLanguage);
+        
+        // Add language change listener
+        languageSelector.addEventListener('change', (e) => {
+            translateContent(e.target.value);
+        });
+    }
+});
+
+// Function to add translate attributes to elements
+function addTranslateAttributes() {
+    // Navigation
+    const navLinks = document.querySelectorAll('.nav-menu a');
+    const navKeys = ['nav-sobre', 'nav-formacao', 'nav-certificados', 'nav-habilidades', 'nav-projetos', 'nav-contato'];
+    navLinks.forEach((link, index) => {
+        if (navKeys[index]) link.setAttribute('data-translate', navKeys[index]);
+    });
+    
+    // Brand title
+    const brandTitle = document.querySelector('.brand-title');
+    if (brandTitle) brandTitle.setAttribute('data-translate', 'brand-title');
+    
+    // Hero section
+    const heroTitle = document.querySelector('.hero-title');
+    if (heroTitle) heroTitle.setAttribute('data-translate', 'hero-title');
+    
+    const heroDescription = document.querySelector('.hero-description');
+    if (heroDescription) heroDescription.setAttribute('data-translate', 'hero-description');
+    
+    const btnPrimary = document.querySelector('.btn-primary');
+    if (btnPrimary) btnPrimary.setAttribute('data-translate', 'btn-projects');
+    
+    const btnSecondary = document.querySelector('.btn-secondary');
+    if (btnSecondary) btnSecondary.setAttribute('data-translate', 'btn-about');
+    
+    // Section subtitles and titles
+    const subtitles = document.querySelectorAll('.section-subtitle');
+    const subtitleKeys = ['about-subtitle', 'education-subtitle', 'certificates-subtitle', 'skills-subtitle', 'projects-subtitle', 'contact-subtitle'];
+    subtitles.forEach((subtitle, index) => {
+        if (subtitleKeys[index]) subtitle.setAttribute('data-translate', subtitleKeys[index]);
+    });
+    
+    const titles = document.querySelectorAll('.section-title');
+    const titleKeys = ['about-title', 'education-title', 'certificates-title', 'skills-title', 'projects-title', 'contact-title'];
+    titles.forEach((title, index) => {
+        if (titleKeys[index]) title.setAttribute('data-translate', titleKeys[index]);
+    });
+    
+    // About section
+    const aboutTexts = document.querySelectorAll('.about-text p');
+    if (aboutTexts[0]) aboutTexts[0].setAttribute('data-translate', 'about-text-1');
+    if (aboutTexts[1]) aboutTexts[1].setAttribute('data-translate', 'about-text-2');
+    
+    const tags = document.querySelectorAll('.tag');
+    tags.forEach((tag, index) => {
+        tag.setAttribute('data-translate', `tag-${index + 1}`);
+    });
+    
+    // Education section
+    const educationCourse = document.querySelector('.education-card h3');
+    if (educationCourse) educationCourse.setAttribute('data-translate', 'education-course');
+    
+    const educationInstitution = document.querySelector('.education-institution');
+    if (educationInstitution) educationInstitution.setAttribute('data-translate', 'education-institution');
+    
+    const educationPeriod = document.querySelector('.education-period');
+    if (educationPeriod) educationPeriod.setAttribute('data-translate', 'education-period');
+    
+    const educationDescription = document.querySelector('.education-description');
+    if (educationDescription) educationDescription.setAttribute('data-translate', 'education-description');
+    
+    // Courses
+    const courseTitles = document.querySelectorAll('.course-card h4');
+    courseTitles.forEach((title, index) => {
+        title.setAttribute('data-translate', `course-${index + 1}-title`);
+    });
+    
+    const coursePlatforms = document.querySelectorAll('.course-platform');
+    coursePlatforms.forEach((platform, index) => {
+        platform.setAttribute('data-translate', `course-${index + 1}-platform`);
+    });
+    
+    const courseDescriptions = document.querySelectorAll('.course-description');
+    courseDescriptions.forEach((description, index) => {
+        description.setAttribute('data-translate', `course-${index + 1}-description`);
+    });
+    
+    // Certificates
+    const certTitles = document.querySelectorAll('.certificate-card h3');
+    certTitles.forEach((title, index) => {
+        title.setAttribute('data-translate', `cert-${index + 1}-title`);
+    });
+    
+    const certPlatforms = document.querySelectorAll('.certificate-platform');
+    certPlatforms.forEach((platform, index) => {
+        platform.setAttribute('data-translate', `cert-${index + 1}-platform`);
+    });
+    
+    const certYears = document.querySelectorAll('.certificate-year');
+    certYears.forEach((year, index) => {
+        year.setAttribute('data-translate', `cert-${index + 1}-year`);
+    });
+    
+    const btnCertificates = document.querySelectorAll('.btn-certificate');
+    btnCertificates.forEach(btn => {
+        btn.setAttribute('data-translate', 'btn-certificate');
+    });
+    
+    // Skills section headings
+    const skillsSections = document.querySelectorAll('.skills-section h3');
+    const skillsKeys = ['skills-frontend', 'skills-backend', 'skills-tools'];
+    skillsSections.forEach((section, index) => {
+        if (skillsKeys[index]) section.setAttribute('data-translate', skillsKeys[index]);
+    });
+    
+    // Projects
+    const projectTitles = document.querySelectorAll('.project-content h3');
+    projectTitles.forEach((title, index) => {
+        title.setAttribute('data-translate', `project-${index + 1}-title`);
+    });
+    
+    const projectDescriptions = document.querySelectorAll('.project-content p');
+    projectDescriptions.forEach((description, index) => {
+        description.setAttribute('data-translate', `project-${index + 1}-description`);
+    });
+    
+    const btnProjects = document.querySelectorAll('.btn-project');
+    btnProjects.forEach(btn => {
+        btn.setAttribute('data-translate', 'btn-code');
+    });
+    
+    // Contact section
+    const contactInfoTitle = document.querySelector('.contact-info h3');
+    if (contactInfoTitle) contactInfoTitle.setAttribute('data-translate', 'contact-info-title');
+    
+    const contactInfoText = document.querySelector('.contact-info p');
+    if (contactInfoText) contactInfoText.setAttribute('data-translate', 'contact-info-text');
+    
+    const availabilityTitle = document.querySelector('.availability h3');
+    if (availabilityTitle) availabilityTitle.setAttribute('data-translate', 'availability-title');
+    
+    const availabilityText = document.querySelector('.availability p');
+    if (availabilityText) availabilityText.setAttribute('data-translate', 'availability-text');
+    
+    const availabilityStatus = document.querySelector('.availability-status span:last-child');
+    if (availabilityStatus) availabilityStatus.setAttribute('data-translate', 'availability-status');
+    
+    const socialTitle = document.querySelector('.social-links h3');
+    if (socialTitle) socialTitle.setAttribute('data-translate', 'social-title');
+    
+    // Footer
+    const footerQuote = document.querySelector('.footer-quote');
+    if (footerQuote) footerQuote.setAttribute('data-translate', 'footer-quote');
+    
+    const footerCopyright = document.querySelector('.footer-copyright');
+    if (footerCopyright) footerCopyright.setAttribute('data-translate', 'footer-copyright');
+}
+
 console.log('🚀 Portfolio JavaScript carregado com sucesso!');
