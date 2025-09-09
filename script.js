@@ -162,16 +162,16 @@ function typeWriter(element, text, speed = 100) {
     type();
 }
 
-// Initialize typing effect after page load
-window.addEventListener('load', () => {
-    const heroTitle = document.querySelector('.hero-title');
-    if (heroTitle) {
-        const originalText = heroTitle.textContent;
-        setTimeout(() => {
-            typeWriter(heroTitle, originalText, 80);
-        }, 500);
-    }
-});
+// Initialize typing effect after page load - DISABLED
+// window.addEventListener('load', () => {
+//     const heroTitle = document.querySelector('.hero-title');
+//     if (heroTitle) {
+//         const originalText = heroTitle.textContent;
+//         setTimeout(() => {
+//             typeWriter(heroTitle, originalText, 80);
+//         }, 500);
+//     }
+// });
 
 // Skill items hover effect
 document.querySelectorAll('.skill-item').forEach(skill => {
@@ -230,49 +230,49 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Loading animation
-window.addEventListener('load', () => {
-    document.body.classList.add('loaded');
-    
-    // Stagger animation for hero elements
-    const heroElements = [
-        '.hero-subtitle',
-        '.hero-title', 
-        '.hero-description',
-        '.hero-buttons',
-        '.hero-social'
-    ];
-    
-    heroElements.forEach((selector, index) => {
-        const element = document.querySelector(selector);
-        if (element) {
-            setTimeout(() => {
-                element.style.opacity = '1';
-                element.style.transform = 'translateY(0)';
-            }, index * 200);
-        }
-    });
-});
+// Loading animation - DISABLED FOR STATIC DISPLAY
+// window.addEventListener('load', () => {
+//     document.body.classList.add('loaded');
+//     
+//     // Stagger animation for hero elements
+//     const heroElements = [
+//         '.hero-subtitle',
+//         '.hero-title', 
+//         '.hero-description',
+//         '.hero-buttons',
+//         '.hero-social'
+//     ];
+//     
+//     heroElements.forEach((selector, index) => {
+//         const element = document.querySelector(selector);
+//         if (element) {
+//             setTimeout(() => {
+//                 element.style.opacity = '1';
+//                 element.style.transform = 'translateY(0)';
+//             }, index * 200);
+//         }
+//     });
+// });
 
-// Initialize hero elements as hidden
-document.addEventListener('DOMContentLoaded', () => {
-    const heroElements = [
-        '.hero-subtitle',
-        '.hero-title', 
-        '.hero-description',
-        '.hero-buttons',
-        '.hero-social'
-    ];
-    
-    heroElements.forEach(selector => {
-        const element = document.querySelector(selector);
-        if (element) {
-            element.style.opacity = '0';
-            element.style.transform = 'translateY(20px)';
-            element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        }
-    });
-});
+// Initialize hero elements as hidden - DISABLED FOR STATIC DISPLAY
+// document.addEventListener('DOMContentLoaded', () => {
+//     const heroElements = [
+//         '.hero-subtitle',
+//         '.hero-title', 
+//         '.hero-description',
+//         '.hero-buttons',
+//         '.hero-social'
+//     ];
+//     
+//     heroElements.forEach(selector => {
+//         const element = document.querySelector(selector);
+//         if (element) {
+//             element.style.opacity = '0';
+//             element.style.transform = 'translateY(20px)';
+//             element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+//         }
+//     });
+// });
 
 // Active navigation highlighting
 window.addEventListener('scroll', () => {
