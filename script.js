@@ -88,10 +88,23 @@ document.querySelectorAll('.project-card, .certificate-card, .course-card, .skil
 });
 
 // Certificate and project button actions
-document.querySelectorAll('.btn-certificate').forEach(button => {
+document.querySelectorAll('.btn-certificate').forEach((button, index) => {
     button.addEventListener('click', (e) => {
         e.preventDefault();
-        alert('Certificado disponível para visualização!');
+        
+        // Map certificates to their respective PDF files
+        const certificateFiles = [
+            'diploma-tecnologia.pdf',           // Diploma de Tecnólogo
+            'certificado-algoritmo.pdf',        // Algoritmo
+            'certificado-html-modulo1.pdf',     // HTML5 e CSS3 Módulo 1
+            'certificado-html-modulo2.pdf'      // HTML5 e CSS3 Módulo 2
+        ];
+        
+        if (certificateFiles[index]) {
+            window.open(certificateFiles[index], '_blank');
+        } else {
+            alert('Certificado disponível para visualização!');
+        }
     });
 });
 
