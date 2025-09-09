@@ -223,7 +223,7 @@ document.querySelectorAll('.contact-item').forEach(item => {
 // Parallax effect for hero section
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
-    const heroImage = document.querySelector('.hero-image img');
+    const heroImage = document.querySelector('.hero-image');
     
     if (heroImage && scrolled < window.innerHeight) {
         heroImage.style.transform = `translateY(${scrolled * 0.3}px)`;
