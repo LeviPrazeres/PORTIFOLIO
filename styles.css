@@ -12,9 +12,16 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1600px;
+        padding: 0 40px;
+    }
 }
 
 /* Header Navigation */
@@ -34,9 +41,16 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+@media (min-width: 1600px) {
+    .nav {
+        max-width: 1600px;
+        padding: 0 40px;
+    }
 }
 
 .nav-brand {
@@ -146,9 +160,17 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+@media (min-width: 1600px) {
+    .hero-content {
+        max-width: 1600px;
+        gap: 6rem;
+        padding: 0 40px;
+    }
 }
 
 .hero-subtitle {
@@ -160,7 +182,7 @@ body {
 }
 
 .hero-title {
-    font-size: 2.56rem;
+    font-size: clamp(2rem, 4vw, 3.5rem);
     font-weight: 700;
     line-height: 1.1;
     margin-bottom: 1.5rem;
@@ -168,7 +190,7 @@ body {
 }
 
 .hero-description {
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
     color: #666;
     margin-bottom: 2rem;
     line-height: 1.6;
@@ -304,7 +326,7 @@ section {
 }
 
 .section-title {
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 3.5vw, 3rem);
     font-weight: 700;
     color: #000;
     margin-bottom: 3rem;
