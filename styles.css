@@ -824,6 +824,11 @@ section {
     
     .nav {
         padding: 0 15px;
+        gap: 1rem;
+    }
+    
+    .nav-language {
+        margin-right: 1rem;
     }
     
     .nav-menu {
@@ -928,6 +933,16 @@ section {
     
     .nav {
         padding: 0 10px;
+        gap: 1.5rem;
+    }
+    
+    .nav-language {
+        margin-right: 1.5rem;
+    }
+    
+    .language-dropdown {
+        padding: 6px 10px;
+        font-size: 13px;
     }
     
     .hero {
