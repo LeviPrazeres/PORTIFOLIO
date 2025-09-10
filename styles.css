@@ -219,9 +219,9 @@ body {
 }
 
 .hero-title {
-    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-size: clamp(1.8rem, 4vw, 3.5rem);
     font-weight: 700;
-    line-height: 1.1;
+    line-height: 1.2;
     margin-bottom: 1.5rem;
     color: #000;
 }
@@ -818,6 +818,10 @@ section {
         padding: 0 15px;
     }
     
+    .header {
+        padding: 1.5rem 0;
+    }
+    
     .nav {
         padding: 0 15px;
     }
@@ -844,14 +848,25 @@ section {
     }
 
     .hero {
-        padding-top: 100px;
+        padding-top: 120px;
+        min-height: 100vh;
     }
 
     .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
-        gap: 2rem;
+        gap: 3rem;
         padding: 0 15px;
+    }
+    
+    .hero-image {
+        order: -1;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-image img {
+        max-width: 280px;
+        width: 90%;
     }
 
     .about-content {
@@ -863,12 +878,14 @@ section {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
+        margin: 2rem 0;
     }
 
     .btn-primary,
     .btn-secondary {
-        width: 200px;
-        padding: 14px 24px;
+        width: 250px;
+        padding: 16px 24px;
+        font-size: 16px;
     }
 
     .projects-grid {
@@ -905,23 +922,38 @@ section {
         padding: 0 10px;
     }
     
+    .header {
+        padding: 1rem 0;
+    }
+    
     .nav {
         padding: 0 10px;
     }
     
+    .hero {
+        padding-top: 100px;
+    }
+    
     .hero-content {
         padding: 0 10px;
-        gap: 1.5rem;
+        gap: 2rem;
+    }
+    
+    .hero-image img {
+        max-width: 250px;
+        width: 85%;
     }
 
     .hero-buttons {
         width: 100%;
+        margin: 1.5rem 0;
     }
 
     .btn-primary,
     .btn-secondary {
         width: 100%;
-        padding: 16px 24px;
+        padding: 18px 24px;
+        font-size: 16px;
     }
 
     .skills-grid {
