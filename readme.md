@@ -1,4 +1,4 @@
-# Portfólio Samuel - Engenheiro de Software
+# Portfólio 
 
 ## Visão Geral
 Clone completo de um portfólio moderno e responsivo, desenvolvido apenas com HTML, CSS e JavaScript puro. O projeto replica fielmente o design das imagens fornecidas, incluindo todas as seções e funcionalidades.
