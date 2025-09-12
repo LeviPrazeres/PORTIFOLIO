@@ -57,6 +57,7 @@ body {
     display: flex;
     align-items: center;
     gap: 12px;
+    flex-shrink: 0;
 }
 
 .avatar {
@@ -832,6 +833,20 @@ section {
     
     .nav-language {
         margin-right: 1rem;
+    }
+    
+    .nav-brand {
+        flex-shrink: 0;
+        min-width: auto;
+    }
+    
+    .avatar {
+        width: 40px !important;
+        height: 40px !important;
+        min-width: 40px !important;
+        min-height: 40px !important;
+        border-radius: 50% !important;
+        flex-shrink: 0 !important;
     }
     
     .nav-menu {
