@@ -400,7 +400,7 @@ const translations = {
         
         // Footer
         'footer-quote': 'Sempre aprendendo, sempre evoluindo',
-        'footer-copyright': '© 2025 Samuel. Todos os direitos reservados.'
+        'footer-copyright': '© 2025 Levi. Todos os direitos reservados.'
     },
     en: {
         // Navigation
@@ -489,7 +489,7 @@ const translations = {
         
         // Footer
         'footer-quote': 'Always learning, always evolving',
-        'footer-copyright': '© 2025 Samuel. All rights reserved.'
+        'footer-copyright': '© 2025 Levi. All rights reserved.'
     }
 };
 
