@@ -110,8 +110,12 @@ document.querySelectorAll('.btn-certificate').forEach((button, index) => {
 
 document.querySelectorAll('.btn-project').forEach(button => {
     button.addEventListener('click', (e) => {
-        e.preventDefault();
-        alert('Código do projeto disponível no GitHub!');
+        // Only prevent default if it's not a link with href
+        if (!button.hasAttribute('href')) {
+            e.preventDefault();
+            alert('Código do projeto disponível no GitHub!');
+        }
+        // If it has href, let the link work normally
     });
 });
 
@@ -380,12 +384,10 @@ const translations = {
         // Projects Section
         'projects-subtitle': 'PROJETOS',
         'projects-title': 'Alguns dos meus trabalhos',
-        'project-1-title': 'Sistema de Gerenciamento',
-        'project-1-description': 'Aplicação web completa para gerenciar dados de clientes com Node.js e MongoDB.',
-        'project-2-title': 'Dashboard Analytics',
-        'project-2-description': 'Interface interativa para visualização de dados com gráficos dinâmicos.',
-        'project-3-title': 'API RESTful',
-        'project-3-description': 'API robusta para gestão de recursos com autenticação e documentação.',
+        'project-1-title': 'ClientNexus - Sistema de Gerenciamento de Clientes',
+        'project-1-description': 'Um sistema moderno e responsivo para gerenciamento de clientes, construído com tecnologias de ponta e interface intuitiva. Inclui dashboard completo, relatórios avançados e tema noturno elegante.',
+        'project-2-title': 'Stylus Concept - Catálogo Online',
+        'project-2-description': 'Catálogo online de moda com visualização de produtos, filtros avançados e integração com WhatsApp para contato.',
         'btn-code': 'Código',
         
         // Contact Section
@@ -469,12 +471,10 @@ const translations = {
         // Projects Section
         'projects-subtitle': 'PROJECTS',
         'projects-title': 'Some of my work',
-        'project-1-title': 'Management System',
-        'project-1-description': 'Complete web application to manage client data with Node.js and MongoDB.',
-        'project-2-title': 'Analytics Dashboard',
-        'project-2-description': 'Interactive interface for data visualization with dynamic graphics.',
-        'project-3-title': 'RESTful API',
-        'project-3-description': 'Robust API for resource management with authentication and documentation.',
+        'project-1-title': 'ClientNexus - Customer Management System',
+        'project-1-description': 'A modern and responsive customer management system, built with cutting-edge technologies and intuitive interface. Includes complete dashboard, advanced reports and elegant dark theme.',
+        'project-2-title': 'Stylus Concept - Online Catalog',
+        'project-2-description': 'Online fashion catalog with product visualization, advanced filters and WhatsApp integration for contact.',
         'btn-code': 'Code',
         
         // Contact Section

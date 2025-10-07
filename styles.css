@@ -312,7 +312,7 @@ body {
 
 .hero-image img {
     width: 100%;
-    max-width: 400px;
+    max-width: 679px;
     border-radius: 20px;
     filter: grayscale(100%);
     transition: filter 0.3s ease;
@@ -625,8 +625,11 @@ section {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 400px));
     gap: 2rem;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .project-card {
@@ -684,15 +687,61 @@ section {
     background: #000;
     color: white;
     border: none;
-    padding: 8px 16px;
+    padding: 6px 12px;
     border-radius: 6px;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    min-width: 80px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.4;
+    box-sizing: border-box;
 }
 
 .btn-project:hover {
     background: #333;
+}
+
+.btn-site {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    min-width: 80px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.4;
+    box-sizing: border-box;
+}
+
+.btn-site:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+
+.project-buttons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.project-buttons .btn-project,
+.project-buttons .btn-site {
+    flex: 0 0 auto;
+    width: 80px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Contact Section */
@@ -894,7 +943,7 @@ section {
     }
     
     .hero-image img {
-        max-width: 280px;
+        max-width: 350px;
         width: 90%;
     }
     
@@ -923,6 +972,7 @@ section {
 
     .projects-grid {
         grid-template-columns: 1fr;
+        max-width: 100%;
     }
 
     .contact-content {
@@ -987,7 +1037,7 @@ section {
     }
     
     .hero-image img {
-        max-width: 250px;
+        max-width: 300px;
         width: 85%;
     }
 
