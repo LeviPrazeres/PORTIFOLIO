@@ -35,11 +35,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Hero button actions
 heroButtons.forEach(button => {
     button.addEventListener('click', (e) => {
-        if (button.textContent.includes('Ver Projetos')) {
+        if (button.textContent.includes('Ver Projetos') || button.textContent.includes('View Projects')) {
             document.querySelector('#projetos').scrollIntoView({
                 behavior: 'smooth'
             });
-        } else if (button.textContent.includes('Sobre Mim')) {
+        } else if (button.textContent.includes('Sobre Mim') || button.textContent.includes('About Me')) {
             document.querySelector('#sobre').scrollIntoView({
                 behavior: 'smooth'
             });
@@ -237,13 +237,29 @@ document.querySelectorAll('.contact-item').forEach(item => {
     });
 });
 
-// Parallax effect for hero section
+// Parallax effect and fade out for hero image
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const heroImage = document.querySelector('.hero-image');
     
-    if (heroImage && scrolled < window.innerHeight) {
-        heroImage.style.transform = `translateY(${scrolled * 0.3}px)`;
+    if (heroImage) {
+        // Parallax effect
+        if (scrolled < window.innerHeight) {
+            heroImage.style.transform = `translateY(${scrolled * 0.3}px)`;
+        }
+        
+        // Fade out effect when scrolling down
+        const fadeStart = window.innerHeight * 0.1; // Start fading at 10% of viewport height
+        const fadeEnd = window.innerHeight * 0.5; // Complete fade at 50% of viewport height
+        
+        if (scrolled > fadeStart) {
+            const fadeProgress = Math.min((scrolled - fadeStart) / (fadeEnd - fadeStart), 1);
+            const opacity = 1 - fadeProgress;
+            heroImage.style.opacity = opacity;
+            heroImage.style.transition = 'opacity 0.3s ease';
+        } else {
+            heroImage.style.opacity = '1';
+        }
     }
 });
 
@@ -389,6 +405,7 @@ const translations = {
         'project-2-title': 'Stylus Concept - Catálogo Online',
         'project-2-description': 'Catálogo online de moda com visualização de produtos, filtros avançados e integração com WhatsApp para contato.',
         'btn-code': 'Código',
+        'btn-site': 'Ver Site',
         
         // Contact Section
         'contact-subtitle': 'PRECISA DE UM DESENVOLVEDOR?',
@@ -476,6 +493,7 @@ const translations = {
         'project-2-title': 'Stylus Concept - Online Catalog',
         'project-2-description': 'Online fashion catalog with product visualization, advanced filters and WhatsApp integration for contact.',
         'btn-code': 'Code',
+        'btn-site': 'View Site',
         
         // Contact Section
         'contact-subtitle': 'NEED A DEVELOPER?',
@@ -656,6 +674,11 @@ function addTranslateAttributes() {
     const btnProjects = document.querySelectorAll('.btn-project');
     btnProjects.forEach(btn => {
         btn.setAttribute('data-translate', 'btn-code');
+    });
+    
+    const btnSites = document.querySelectorAll('.btn-site');
+    btnSites.forEach(btn => {
+        btn.setAttribute('data-translate', 'btn-site');
     });
     
     // Contact section

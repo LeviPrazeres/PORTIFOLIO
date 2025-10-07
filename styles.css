@@ -311,8 +311,8 @@ body {
 }
 
 .hero-image img {
-    width: 100%;
-    max-width: 679px;
+    width: 120%;
+    max-width: 1100px;
     border-radius: 20px;
     filter: grayscale(100%);
     transition: filter 0.3s ease;
@@ -687,14 +687,14 @@ section {
     background: #000;
     color: white;
     border: none;
-    padding: 6px 12px;
+    padding: 8px 16px;
     border-radius: 6px;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
     text-decoration: none;
     display: inline-block;
-    min-width: 80px;
+    min-width: 100px;
     text-align: center;
     font-size: 14px;
     line-height: 1.4;
@@ -709,14 +709,14 @@ section {
     background: #007bff;
     color: white;
     border: none;
-    padding: 6px 12px;
+    padding: 8px 16px;
     border-radius: 6px;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
     text-decoration: none;
     display: inline-block;
-    min-width: 80px;
+    min-width: 100px;
     text-align: center;
     font-size: 14px;
     line-height: 1.4;
@@ -737,11 +737,12 @@ section {
 .project-buttons .btn-project,
 .project-buttons .btn-site {
     flex: 0 0 auto;
-    width: 80px;
+    width: 100px;
     height: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
+    white-space: nowrap;
 }
 
 /* Contact Section */
@@ -943,7 +944,7 @@ section {
     }
     
     .hero-image img {
-        max-width: 350px;
+        max-width: 550px;
         width: 90%;
     }
     
@@ -1037,7 +1038,7 @@ section {
     }
     
     .hero-image img {
-        max-width: 300px;
+        max-width: 480px;
         width: 85%;
     }
 
